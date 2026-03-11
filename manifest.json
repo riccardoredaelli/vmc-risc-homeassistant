@@ -1,0 +1,12 @@
+{
+  "domain": "vmc",
+  "name": "VMC Ris C - RS485 to Modbus TCP",
+  "documentation": "https://github.com/riccardoredaelli/vmc-risc-homeassistant",
+  "issue_tracker": "https://github.com/riccardoredaelli/vmc-risc-homeassistant/issues",
+  "dependencies": ["modbus"],
+  "codeowners": ["@riccardoredaelli"],
+  "config_flow": true,
+  "iot_class": "local_polling",
+  "version": "1.0.0",
+  "requirements": []
+}
