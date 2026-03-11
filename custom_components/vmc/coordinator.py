@@ -1,4 +1,3 @@
-"""Data coordinator."""
 import logging
 from datetime import timedelta
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator

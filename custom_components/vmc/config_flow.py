@@ -1,4 +1,3 @@
-"""Config Flow per VMC Waveshare."""
 import logging
 import voluptuous as vol
 from homeassistant.config_entries import ConfigFlow

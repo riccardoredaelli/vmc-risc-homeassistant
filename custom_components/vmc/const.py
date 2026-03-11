@@ -1,5 +1,3 @@
-"""Costanti VMC."""
-
 DOMAIN = "vmc"
 
 CONF_HOST = "host"
