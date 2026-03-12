@@ -6,34 +6,117 @@ CONF_SLAVE_ID = "slave_id"
 
 SENSOR_TYPES = {
     "velocita_selezionata": {
-        "name": "Velocità selezionata",
+        "name": "VMC Velocità Selezionata",
         "icon": "mdi:speedometer",
         "unit": None,
         "device_class": None,
-        "address": 0
+        "address": 0,
+        "data_type": "uint16",
     },
     "velocita_attiva": {
-        "name": "Velocità attiva",
+        "name": "VMC Velocità Attiva",
         "icon": "mdi:fan",
         "unit": None,
         "device_class": None,
-        "address": 1
+        "address": 1,
+        "data_type": "uint16",
     },
-    "modalita_gestione": {
-        "name": "Modalità gestione",
+    "gest_ventilazione": {
+        "name": "VMC Gestione Ventilazione",
+        "icon": "mdi:air-filter",
+        "unit": None,
+        "device_class": None,
+        "address": 2,
+        "data_type": "uint16",
+    },
+    "gest_deumidifica": {
+        "name": "VMC Gestione Deumidifica",
+        "icon": "mdi:water-percent",
+        "unit": None,
+        "device_class": None,
+        "address": 3,
+        "data_type": "uint16",
+    },
+    "gest_integrazione": {
+        "name": "VMC Gestione Integrazione",
+        "icon": "mdi:heat-wave",
+        "unit": None,
+        "device_class": None,
+        "address": 4,
+        "data_type": "uint16",
+    },
+    "gest_ricircolo": {
+        "name": "VMC Gestione Ricircolo",
+        "icon": "mdi:sync",
+        "unit": None,
+        "device_class": None,
+        "address": 5,
+        "data_type": "uint16",
+    },
+    "modalita_attiva": {
+        "name": "VMC Modalità Attiva",
         "icon": "mdi:air-conditioner",
         "unit": None,
         "device_class": None,
-        "address": 7
+        "address": 6,
+        "data_type": "uint16",
+    },
+    "gest_estate_inverno": {
+        "name": "VMC Gestione Estate/Inverno",
+        "icon": "mdi:sun-snowflake",
+        "unit": None,
+        "device_class": None,
+        "address": 7,
+        "data_type": "uint16",
+    },
+    "modalita_gestione": {
+        "name": "VMC Modalità Gestione",
+        "icon": "mdi:cog",
+        "unit": None,
+        "device_class": None,
+        "address": 8,
+        "data_type": "uint16",
+    },
+    "allarme_attivo": {
+        "name": "VMC Allarme Attivo",
+        "icon": "mdi:alarm-light",
+        "unit": None,
+        "device_class": None,
+        "address": 10,
+        "data_type": "uint16",
+    },
+    "codice_evento": {
+        "name": "VMC Codice Evento",
+        "icon": "mdi:information",
+        "unit": None,
+        "device_class": None,
+        "address": 12,
+        "data_type": "uint16",
     },
     "temp_immissione": {
-        "name": "Temp immissione",
+        "name": "VMC Temperatura Immissione",
         "icon": "mdi:thermometer",
         "unit": "°C",
         "device_class": "temperature",
-        "address": 26
-    }
-    # Aggiungi altri...
+        "address": 26,
+        "data_type": "float32",
+    },
+    "temp_rinnovo": {
+        "name": "VMC Temperatura Rinnovo",
+        "icon": "mdi:thermometer",
+        "unit": "°C",
+        "device_class": "temperature",
+        "address": 27,
+        "data_type": "float32",
+    },
+    "temp_ripresa": {
+        "name": "VMC Temperatura Ripresa",
+        "icon": "mdi:thermometer",
+        "unit": "°C",
+        "device_class": "temperature",
+        "address": 28,
+        "data_type": "float32",
+    },
 }
 
 MODALITA_MAP = {
@@ -54,5 +137,14 @@ MODALITA_MAP = {
     14: "Deum+Integ STBY",
     15: "Vent+Deum STBY",
     16: "Vent+Integ STBY",
-    17: "Vent+Deu+Int STBY"
+    17: "Vent+Deu+Int STBY",
+}
+
+VELOCITA_MAP = {
+    0: "OFF",
+    1: "Vel1",
+    2: "Vel2",
+    3: "Vel3",
+    4: "Auto1",
+    5: "Auto2",
 }

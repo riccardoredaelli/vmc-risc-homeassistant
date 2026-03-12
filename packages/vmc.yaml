@@ -1,0 +1,58 @@
+modbus:
+  - name: vmc_waveshare_rs485
+    type: tcp
+    host: 192.168.1.200
+    port: 502
+    timeout: 3
+    delay: 0.05
+    close_comm_on_error: false
+    retry_on_empty: true
+
+    sensors:
+      - name: vmc_velocita_selezionata
+        unique_id: vmc_velocita_selezionata
+        slave: 1
+        address: 0
+        input_type: holding
+        data_type: uint16
+        scan_interval: 10
+
+      - name: vmc_velocita_attiva
+        unique_id: vmc_velocita_attiva
+        slave: 1
+        address: 1
+        input_type: holding
+        data_type: uint16
+        scan_interval: 10
+
+      - name: vmc_modalita_gestione
+        unique_id: vmc_modalita_gestione
+        slave: 1
+        address: 7
+        input_type: holding
+        data_type: uint16
+        scan_interval: 10
+
+      - name: vmc_temp_immissione
+        unique_id: vmc_temp_immissione
+        slave: 1
+        address: 26
+        input_type: holding
+        data_type: float32
+        scan_interval: 10
+
+      - name: vmc_temp_rinnovo
+        unique_id: vmc_temp_rinnovo
+        slave: 1
+        address: 27
+        input_type: holding
+        data_type: float32
+        scan_interval: 10
+
+      - name: vmc_temp_ripresa
+        unique_id: vmc_temp_ripresa
+        slave: 1
+        address: 28
+        input_type: holding
+        data_type: float32
+        scan_interval: 10
